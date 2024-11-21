@@ -58,6 +58,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -81,6 +83,9 @@ flutter:
     - family: child
       fonts:
         - asset: assets/fonts/Odin/Regular/Odin_Rounded_Regular.otf
+    - family: round
+      fonts:
+        - asset: assets/fonts/nunito/Nunito-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

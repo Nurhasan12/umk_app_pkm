@@ -1,6 +1,7 @@
-import 'package:ecommerse/features/auth/pages/signup_page.dart';
 import 'package:flutter/material.dart';
-import '../../../core/constants/colors.dart';
+import 'package:umk_app_pkm/features/auth/pages/signup_page.dart';
+
+import '../../../core/constant/colors.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

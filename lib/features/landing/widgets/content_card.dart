@@ -1,7 +1,8 @@
 // lib/features/landing/widgets/content_card.dart
 
 import 'package:flutter/material.dart';
-import '../../../core/constants/colors.dart';
+
+import '../../../core/constant/colors.dart';
 
 class ContentCard extends StatelessWidget {
   final double topPosition;
@@ -35,6 +36,18 @@ class ContentCard extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           color: AppColors.primary,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black54,
+                offset: Offset(0, -4),
+                blurRadius: 10.0,
+                spreadRadius: 0,
+              ),
+            ],
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30.0),
+            topRight: Radius.circular(30.0),
+          )
         ),
         child: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),
@@ -46,8 +59,9 @@ class ContentCard extends StatelessWidget {
               contentPadding * 0.75,
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                SizedBox(height: verticalSpacing),
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
@@ -58,10 +72,16 @@ class ContentCard extends StatelessWidget {
                           fontSize: titleFontSize,
                         ),
                     children: [
-                      const TextSpan(text: 'Bangun UMKM Indonesia\n'),
+                      const TextSpan(
+                          text: 'Bangun UMKM Indonesia\n',
+                          style: TextStyle(
+                            fontFamily: 'primary',
+                          )
+                      ),
                       TextSpan(
                         text: 'menjadi pengusaha\n',
                         style: TextStyle(
+                          fontFamily: 'primary',
                           fontWeight: FontWeight.w500,
                           fontSize: subtitleFontSize,
                         ),
@@ -69,6 +89,7 @@ class ContentCard extends StatelessWidget {
                       TextSpan(
                         text: 'Mendunia',
                         style: TextStyle(
+                          fontFamily: 'primary',
                           fontWeight: FontWeight.w500,
                           fontSize: subtitleFontSize,
                         ),
@@ -82,12 +103,13 @@ class ContentCard extends StatelessWidget {
                   'Mobile Apps UMKM Indonesia',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppColors.white,
+                        fontFamily: 'child',
                         fontSize: descriptionFontSize,
                         fontWeight: FontWeight.w400,
                       ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: verticalSpacing * 1.5),
+                SizedBox(height: verticalSpacing * 4),
                 // Get Started Button
                 Center(
                   child: SizedBox(
@@ -109,6 +131,7 @@ class ContentCard extends StatelessWidget {
                       child: Text(
                         'Get Started',
                         style: TextStyle(
+                          fontFamily: 'primary',
                           fontSize: buttonFontSize,
                           fontWeight: FontWeight.w600,
                           color: AppColors.black,
